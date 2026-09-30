@@ -169,31 +169,31 @@ export default function LondonDetourPage() {
               so we tested it out with simplified approaches.
             </p>
           </div>
-          <div className="two-col" style={{ marginTop: "3rem" }}>
-            <article className="content-card">
+          <div className="testing-composition">
+            <div className="testing-copy">
               <h3>Short-stay tourists are unlikely to download a new app.</h3>
               <p>Rather than building a digital-first product that would face adoption friction before it delivered any value, we designed a physical-first system with a lightweight digital layer.</p>
               <h3 style={{ marginTop: "2rem" }}>Prompt cards as the main driver</h3>
               <p>A curated, pocket-sized guide to a specific off-centre neighbourhood, distributed at high-traffic tourist spots and placed at strategic low-traffic points across the city. Cards were designed to be immediately useful without setup, scannable via QR code for those who wanted more depth and shareable—intended to be left behind or passed on.</p>
-            </article>
-            <article className="content-card">
               <h3>Three distribution contexts were tested in parallel</h3>
               <p>Hand-distribution at tourist hotspots, card racks at visitor information points and QR stickers placed at street-level locations allowed us to test engagement and reach.</p>
               <h3 style={{ marginTop: "2rem" }}>Launched social media first to build credibility.</h3>
               <p>Visitors are more likely to act on a recommendation they can verify is real. Building an @LDNdetour presence first meant the QR code on every card led somewhere trustworthy.</p>
-            </article>
-          </div>
-          <MediaFrame
-            src="/assets/london-detour/prompt-cards-fan.png"
-            alt="A fan of colour-coded London Detour prompt cards"
-            contain
-            ratio="712 / 368"
-          />
-          <div className="touchpoint-strip" aria-label="London Detour physical touchpoints">
-            <MediaFrame src="/assets/london-detour/walking-sign-touchpoint.png" alt="Orange London Detour card attached to a walking sign" ratio="173 / 374" />
-            <MediaFrame src="/assets/london-detour/scooter-touchpoint.png" alt="Purple London Detour card on a hire scooter" ratio="173 / 374" />
-            <MediaFrame src="/assets/london-detour/tube-touchpoint-original.png" alt="Green London Detour card beside a tube station" ratio="173 / 374" />
-            <MediaFrame src="/assets/london-detour/street-map-touchpoint.png" alt="Pink London Detour card on a street map" ratio="173 / 374" />
+            </div>
+            <div className="testing-visuals">
+              <MediaFrame
+                src="/assets/london-detour/prompt-cards-fan.png"
+                alt="A fan of colour-coded London Detour prompt cards"
+                contain
+                ratio="712 / 368"
+              />
+              <div className="touchpoint-strip" aria-label="London Detour physical touchpoints">
+                <MediaFrame src="/assets/london-detour/walking-sign-touchpoint.png" alt="Orange London Detour card attached to a walking sign" ratio="173 / 374" />
+                <MediaFrame src="/assets/london-detour/scooter-touchpoint.png" alt="Purple London Detour card on a hire scooter" ratio="173 / 374" />
+                <MediaFrame src="/assets/london-detour/tube-touchpoint-original.png" alt="Green London Detour card beside a tube station" ratio="173 / 374" />
+                <MediaFrame src="/assets/london-detour/street-map-touchpoint.png" alt="Pink London Detour card on a street map" ratio="173 / 374" />
+              </div>
+            </div>
           </div>
           <div className="prototype-mosaic" aria-label="London Detour prototype testing">
             <GalleryTile src="/assets/london-detour/qr-wall.png" alt="QR prompt placed on a street wall" />

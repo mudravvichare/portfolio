@@ -1,17 +1,17 @@
 .page { min-height: 100svh; background: var(--paper); }
 .hero {
-  display: grid; grid-template-columns: 250px minmax(0, 730px); align-items: center;
-  justify-content: center; gap: clamp(4rem, 5vw, 5rem); min-height: 330px; padding: 1.5rem var(--gutter) 2.5rem;
+  display: grid; grid-template-columns: 305px minmax(0, 730px); align-items: center;
+  justify-content: center; gap: clamp(4rem, 5vw, 5rem); min-height: 470px; padding: 1.5rem var(--gutter) 2.5rem;
 }
 .portrait {
-  position: relative; width: 250px; aspect-ratio: 1;
+  position: relative; width: 305px; aspect-ratio: 1;
 }
 .portrait img { object-fit: contain; }
 .intro h1 { font-family: var(--font-cal-sans), sans-serif; font-size: clamp(2.35rem, 2.8vw, 2.6rem); font-weight: 400; line-height: 1.05; }
-.intro > p { margin-top: 0.75rem; font-size: clamp(1.75rem, 2.1vw, 2rem); line-height: 1.2; letter-spacing: -0.025em; }
+.intro > p { margin-top: 0.75rem; font-size: clamp(1.75rem, 2.1vw, 2.5rem); line-height: 1.2; letter-spacing: -0.025em; }
 .heroLinks { display: flex; gap: 3rem; margin-top: 2.8rem; font-size: 1.1rem; font-weight: 800; }
 .work { padding: 1.5rem var(--gutter) 4.5rem; }
-.work > h2 { margin-bottom: 1.8rem; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.08em; }
+.work > h2 { margin-bottom: 1.8rem; font-size: 1.25rem; font-weight: 600; }
 .mobileNote { display: none; }
 .projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(2rem, 4.3vw, 4rem); }
 :global(.project-card) { position: relative; display: block; min-width: 0; }
@@ -25,12 +25,12 @@
 :global(.wip-mobile) { display: none; }
 
 @media (max-width: 800px) {
-  .hero { grid-template-columns: 142px 1fr; gap: 1.1rem; min-height: 195px; justify-content: stretch; padding: 1.6rem 1.25rem 1rem; }
-  .portrait { width: 142px; }
-  .intro h1 { font-size: 1.48rem; white-space: nowrap; }
+  .hero { grid-template-columns: 110px 1fr; gap: 1rem; min-height: 145px; justify-content: stretch; padding: 1rem 1.25rem 0.5rem; }
+  .portrait { width: 110px; }
+  .intro h1 { font-size: 1.22rem; white-space: nowrap; }
   .intro > p { margin-top: 0.35rem; font-size: 1.45rem; line-height: 1.23; }
   .heroLinks { display: none; }
-  .work { padding: 2rem 1.25rem 6rem; }
+  .work { padding: 1rem 1.25rem 6rem; }
   .work > h2 { display: none; }
   .mobileNote { display: block; margin-bottom: 2.2rem; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.08em; }
   .projects { grid-template-columns: 1fr; gap: 3rem; }

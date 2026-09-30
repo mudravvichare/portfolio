@@ -90,8 +90,10 @@ export default function ChannelsPage() {
             <GalleryTile src="/assets/channels/research-wall-original.png" alt="Participatory research wall covered with notes" />
             <GalleryTile src="/assets/channels/research-call-original.png" alt="Remote interview with a live-aboard boater" />
             <GalleryTile src="/assets/channels/poster-test.png" alt="Canal-side poster test used during research" />
-            <GalleryTile src="/assets/channels/partner-workshop.png" alt="Research workshop with canal partners" />
-            <GalleryTile src="/assets/channels/canal-interview-original.png" alt="A canal-side intercept interview" />
+            <div className="research-grid-stack">
+              <GalleryTile src="/assets/channels/partner-workshop.png" alt="Research workshop with canal partners" />
+              <GalleryTile src="/assets/channels/canal-interview-original.png" alt="A canal-side intercept interview" />
+            </div>
           </div>
 
           <div className="two-col" style={{ marginTop: "4rem" }}>
