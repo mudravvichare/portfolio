@@ -1,0 +1,40 @@
+.main {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 2rem;
+}
+
+.main > div {
+  max-width: 42rem;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.main h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.description {
+  margin-top: 1.5rem;
+  color: #555;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .eyebrow,
+  .description {
+    color: #aaa;
+  }
+}
