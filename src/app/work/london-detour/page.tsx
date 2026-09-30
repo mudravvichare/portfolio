@@ -131,7 +131,12 @@ export default function LondonDetourPage() {
             <article className="content-card"><h3>Encourage detours</h3><p>Generic “hidden gems” lists that exist everywhere and are largely ignored. We had to be specific, curate and build trust.</p></article>
             <article className="content-card"><h3>Fit into the journey</h3><p>Visitors are already in motion, so anything requiring a download, sign-up, or advance planning adds friction. The intervention had to meet them where they were.</p></article>
           </div>
-          <MediaFrame src="/assets/london-detour/journey-map-original.png" alt="Tourist journey map showing three intervention points" contain ratio="1464 / 805" />
+          <MediaFrame
+            src="/assets/london-detour/intervention-points.png"
+            alt="Tourist journey timeline highlighting three intervention points"
+            contain
+            ratio="1464 / 269"
+          />
           <p style={{ marginTop: "1.5rem" }}>
             We identified three points in the tourist journey where these
             conditions could be created. Two visitor mindsets shaped how we
