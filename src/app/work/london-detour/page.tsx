@@ -16,7 +16,7 @@ export default function LondonDetourPage() {
   return (
     <CaseStudyLayout>
       <CaseHero
-        image="/assets/london-detour/hero-collage.jpg"
+        image="/assets/london-detour/hero-collage-original.png"
         imageAlt="A collage of London Detour prompt cards, workshops, public touchpoints, and prototype testing"
         title="London Detour"
         deck="Testing a multi-touchpoint service to shift tourist behaviour towards discovering lesser-visited, more authentic sides of London beyond its hotspots."
@@ -44,13 +44,15 @@ export default function LondonDetourPage() {
         <div className="case-section-inner">
           <div className="two-col">
             <MediaFrame
-              src="/assets/london-detour/tourism-map.jpg"
+              src="/assets/london-detour/tourism-heatmap.png"
               alt="Map highlighting the London boroughs where visitor spend is concentrated"
               contain
+              ratio="712 / 708"
             />
             <MediaFrame
-              src="/assets/london-detour/crowding.jpg"
+              src="/assets/london-detour/crowding-original.png"
               alt="Crowded central London attractions and congested streets"
+              ratio="712 / 708"
             />
           </div>
           <div className="two-col" style={{ marginTop: "3.5rem" }}>
@@ -85,6 +87,20 @@ export default function LondonDetourPage() {
               </p>
             </div>
           </div>
+          <div className="research-evidence">
+            <MediaFrame
+              src="/assets/london-detour/visitor-spectrum-original.png"
+              alt="Visitor research spectrum from spontaneous to planned travel"
+              contain
+              ratio="423 / 253"
+            />
+            <MediaFrame
+              src="/assets/london-detour/research-call-original.png"
+              alt="Remote interviews with visitors and tourism experts"
+              contain
+              ratio="280 / 253"
+            />
+          </div>
           <div className="quote-grid">
             <blockquote><p>“I like going to a mix of both but stumbling upon places organically always end up being my favorite memories.”</p><cite>Erica (USA), 35 years</cite></blockquote>
             <blockquote><p>“People want something off-the-beaten path, a different offering to the usual (cheaper) tours.”</p><cite>Terry (Edinburgh), Tour Guide</cite></blockquote>
@@ -115,7 +131,7 @@ export default function LondonDetourPage() {
             <article className="content-card"><h3>Encourage detours</h3><p>Generic “hidden gems” lists that exist everywhere and are largely ignored. We had to be specific, curate and build trust.</p></article>
             <article className="content-card"><h3>Fit into the journey</h3><p>Visitors are already in motion, so anything requiring a download, sign-up, or advance planning adds friction. The intervention had to meet them where they were.</p></article>
           </div>
-          <MediaFrame src="/assets/london-detour/journey-map.jpg" alt="Tourist journey map showing three intervention points" contain />
+          <MediaFrame src="/assets/london-detour/journey-map-original.png" alt="Tourist journey map showing three intervention points" contain ratio="1464 / 805" />
           <p style={{ marginTop: "1.5rem" }}>
             We identified three points in the tourist journey where these
             conditions could be created. Two visitor mindsets shaped how we
@@ -123,16 +139,14 @@ export default function LondonDetourPage() {
             deviate, and the Spontaneous visitor, who needs a trusted starting
             point.
           </p>
-          <div className="two-col" style={{ marginTop: "4rem" }}>
-            <article className="content-card">
-              <h3>The “Planned Visitor” mindset</h3>
-              <p>“I like to book everything and like to plan my trip in advance!”</p>
-              <ul className="inline-list"><li>Less likely to explore beyond central.</li><li>Researched a lot on socials for suggestions.</li><li>Weak understanding of London geography and travel time between scheduled activities.</li></ul>
+          <div className="persona-grid">
+            <article className="persona-card">
+              <MediaFrame src="/assets/london-detour/planned-visitor.png" alt="Planned visitor research participant" ratio="341 / 397" />
+              <div><h3>The “Planned Visitor” mindset</h3><p>“I like to book everything and like to plan my trip in advance!”</p><ul className="inline-list"><li>Less likely to explore beyond central.</li><li>Researched a lot on socials for suggestions.</li><li>Weak understanding of London geography and travel time between scheduled activities.</li></ul></div>
             </article>
-            <article className="content-card">
-              <h3>The “Spontaneous Visitor” mindset</h3>
-              <p>“I plan a few key stops and let the rest of the trip unfold.”</p>
-              <ul className="inline-list"><li>Wants to do more local experiences.</li><li>Going with the flow.</li><li>Time-blocks specific pub and dinner plans.</li><li>Prefers cycling, taking the tube/bus or likes to walk.</li></ul>
+            <article className="persona-card">
+              <MediaFrame src="/assets/london-detour/spontaneous-visitor.png" alt="Spontaneous visitor research participant" ratio="342 / 395" />
+              <div><h3>The “Spontaneous Visitor” mindset</h3><p>“I plan a few key stops and let the rest of the trip unfold.”</p><ul className="inline-list"><li>Wants to do more local experiences.</li><li>Going with the flow.</li><li>Time-blocks specific pub and dinner plans.</li><li>Prefers cycling, taking the tube/bus or likes to walk.</li></ul></div>
             </article>
           </div>
         </div>
@@ -164,16 +178,27 @@ export default function LondonDetourPage() {
               <p>Visitors are more likely to act on a recommendation they can verify is real. Building an @LDNdetour presence first meant the QR code on every card led somewhere trustworthy.</p>
             </article>
           </div>
-          <div className="research-grid" aria-label="London Detour prototype testing">
-            <GalleryTile src="/assets/london-detour/testing-wall.jpg" alt="Testing a London Detour prompt wall" />
-            <GalleryTile src="/assets/london-detour/touchpoint-wall.jpg" alt="Cards displayed at a public touchpoint" />
-            <GalleryTile src="/assets/london-detour/prompt-board.jpg" alt="Prototype London Detour cards on a green board" />
-            <GalleryTile src="/assets/london-detour/co-design.jpg" alt="Co-design workshop about London travel types" />
-            <GalleryTile src="/assets/london-detour/prompt-test.jpg" alt="Testing prompt ideas at street level" />
+          <MediaFrame
+            src="/assets/london-detour/prompt-cards-fan.png"
+            alt="A fan of colour-coded London Detour prompt cards"
+            contain
+            ratio="712 / 368"
+          />
+          <div className="touchpoint-strip" aria-label="London Detour physical touchpoints">
+            <MediaFrame src="/assets/london-detour/walking-sign-touchpoint.png" alt="Orange London Detour card attached to a walking sign" ratio="173 / 374" />
+            <MediaFrame src="/assets/london-detour/scooter-touchpoint.png" alt="Purple London Detour card on a hire scooter" ratio="173 / 374" />
+            <MediaFrame src="/assets/london-detour/tube-touchpoint-original.png" alt="Green London Detour card beside a tube station" ratio="173 / 374" />
+            <MediaFrame src="/assets/london-detour/street-map-touchpoint.png" alt="Pink London Detour card on a street map" ratio="173 / 374" />
           </div>
-          <div className="image-pair" style={{ marginTop: "3rem" }}>
-            <MediaFrame src="/assets/london-detour/kensington-touchpoint.jpg" alt="London Detour prompt attached to a Kensington street sign" />
-            <MediaFrame src="/assets/london-detour/station-touchpoint.jpg" alt="London Detour prompt at a train station information sign" />
+          <div className="prototype-mosaic" aria-label="London Detour prototype testing">
+            <GalleryTile src="/assets/london-detour/qr-wall.png" alt="QR prompt placed on a street wall" />
+            <GalleryTile src="/assets/london-detour/co-design-workshop.png" alt="Co-design workshop about London locations" />
+            <GalleryTile src="/assets/london-detour/location-prompts.png" alt="Location prompt testing on a map" />
+            <GalleryTile src="/assets/london-detour/visitor-note-original.png" alt="Visitor-written London recommendation" />
+            <GalleryTile src="/assets/london-detour/prompt-map.png" alt="Take-a-card prototype prompt wall" />
+            <GalleryTile src="/assets/london-detour/testing-wall-original.png" alt="Testing prompts on a public poster wall" />
+            <GalleryTile src="/assets/london-detour/co-design-participant.png" alt="Participant adding a London recommendation" />
+            <GalleryTile src="/assets/london-detour/co-design-team.png" alt="Participants testing London location cards" />
           </div>
         </div>
       </section>
@@ -193,7 +218,7 @@ export default function LondonDetourPage() {
             lightweight digital companion—a save-to-phone function, a shareable
             link—the card&apos;s reach stopped at one visitor and one trip.
           </p>
-          <MediaFrame src="/assets/london-detour/journey-map.jpg" alt="Service journey comparing planned and spontaneous visitors" contain />
+          <MediaFrame src="/assets/london-detour/journey-map-original.png" alt="Service journey comparing planned and spontaneous visitors" contain ratio="1464 / 805" />
           <p style={{ marginTop: "1.5rem" }}>The same card worked differently depending on visitor mindset. Two patterns emerged clearly from testing.</p>
           <div className="two-col" style={{ marginTop: "3rem" }}>
             <article className="content-card"><h3>The Planner</h3><p>Need permission to make room to discover something new. An unexpected gap in the schedule becomes an opportunity for low-stakes exploration. The QR touchpoint encourages a detour without disrupting existing plans, turning spontaneity into a memorable part of the journey.</p></article>
@@ -212,9 +237,12 @@ export default function LondonDetourPage() {
               <p style={{ marginTop: "1.4rem" }}>“I was initially a little nervous going to Brixton, but I was surprised how much fun I had and how cool the area was.” — Juliette (Canada)</p>
             </div>
           </div>
-          <div className="image-pair" style={{ marginTop: "3rem" }}>
-            <MediaFrame src="/assets/london-detour/test-notebook.jpg" alt="Notebook containing notes from London Detour field testing" />
-            <MediaFrame src="/assets/london-detour/prompt-cards.jpg" alt="Colour-coded London Detour prompt cards used during testing" />
+          <div className="outcome-media-grid">
+            <MediaFrame src="/assets/london-detour/test-notebook-original.png" alt="Notebook containing notes from London Detour field testing" ratio="709 / 630" />
+            <div className="outcome-media-stack">
+              <MediaFrame src="/assets/london-detour/prompt-cards-flat.png" alt="Colour-coded London Detour prompt cards used during testing" ratio="709 / 328" />
+              <MediaFrame src="/assets/london-detour/prompt-cards-grid-original.png" alt="Completed London Detour prompt card prototypes" ratio="709 / 328" />
+            </div>
           </div>
           <div className="two-col" style={{ marginTop: "3rem" }}>
             <article className="content-card"><h3>Accessibility concerns</h3><p>“Walking was fine with me, but if I&apos;d been with my mother it would have been hard to complete the prompt.” — Finlay (Denmark)</p><p style={{ marginTop: "1rem" }}>“I really liked the card idea, I think a digital version or way of saving it to my phone would be good too.” — Harrison (USA)</p></article>

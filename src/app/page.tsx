@@ -12,7 +12,7 @@ export default function Home() {
         <section className={styles.hero} aria-labelledby="intro-heading">
           <div className={styles.portrait}>
             <Image
-              src="/assets/home/portrait.jpg"
+              src="/assets/home/portrait-original.png"
               alt="Portrait of Mudra Vichare"
               fill
               priority
@@ -44,20 +44,20 @@ export default function Home() {
           <div className={styles.projects}>
             <ProjectCard
               href="/work/channels"
-              image="/assets/home/channels.jpg"
+              image="/assets/channels/podcast-cover.png"
               title="Strengthening social connection between boaters and canal users"
               metadata="RCA Service Design • 2025"
               alt="Channels project artwork featuring a boater, canal touchpoints, and audio storytelling"
             />
             <ProjectCard
               href="/work/london-detour"
-              image="/assets/home/london-detour.jpg"
+              image="/assets/london-detour/co-design-workshop.png"
               title="Redistributing tourist footfall through local discovery experiences"
               metadata="RCA Service Design • 2026"
               alt="London Detour research wall with colourful location prompt cards"
             />
             <ProjectCard
-              image="/assets/home/rural-response.jpg"
+              image="/assets/home/rural-response-original.png"
               title="Building a connected approach to rural disaster response"
               metadata="RCA Service Design • Imperial School London • 2026"
               alt="Emergency preparedness leaflet being reviewed during a research session"

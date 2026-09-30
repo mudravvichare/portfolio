@@ -16,7 +16,7 @@ export default function ChannelsPage() {
   return (
     <CaseStudyLayout>
       <CaseHero
-        image="/assets/channels/hero-collage.jpg"
+        image="/assets/channels/hero-collage-original.png"
         imageAlt="A collage of London canal communities, boaters, workshops, and canal-side spaces"
         title="Channels"
         deck="Place-based service giving boaters authorship over their narrative & reduce information gaps."
@@ -79,18 +79,19 @@ export default function ChannelsPage() {
               </p>
             </div>
             <MediaFrame
-              src="/assets/channels/research-hypotheses.jpg"
+              src="/assets/channels/research-matrix.png"
               alt="Research hypotheses comparing what was assumed and what research showed"
               contain
+              ratio="358 / 183"
             />
           </div>
 
           <div className="research-grid" aria-label="Research activities">
-            <GalleryTile src="/assets/channels/research-wall.jpg" alt="Participatory research wall covered with notes" />
-            <GalleryTile src="/assets/channels/research-call.jpg" alt="Remote interview with a live-aboard boater" />
-            <GalleryTile src="/assets/channels/journey-map.jpg" alt="Canal area map used during research" />
-            <GalleryTile src="/assets/channels/workshop.jpg" alt="Research workshop at the Royal College of Art" />
-            <GalleryTile src="/assets/channels/canal-interview.jpg" alt="A canal-side intercept interview" />
+            <GalleryTile src="/assets/channels/research-wall-original.png" alt="Participatory research wall covered with notes" />
+            <GalleryTile src="/assets/channels/research-call-original.png" alt="Remote interview with a live-aboard boater" />
+            <GalleryTile src="/assets/channels/poster-test.png" alt="Canal-side poster test used during research" />
+            <GalleryTile src="/assets/channels/partner-workshop.png" alt="Research workshop with canal partners" />
+            <GalleryTile src="/assets/channels/canal-interview-original.png" alt="A canal-side intercept interview" />
           </div>
 
           <div className="two-col" style={{ marginTop: "4rem" }}>
@@ -113,9 +114,10 @@ export default function ChannelsPage() {
           </div>
 
           <MediaFrame
-            src="/assets/channels/systems-map.jpg"
+            src="/assets/channels/systems-map-original.png"
             alt="A wall-sized systems map of canal stakeholders and relationships"
             contain
+            ratio="1464 / 710"
           />
 
           <div className="assumptions" aria-label="Assumptions and research findings">
@@ -156,9 +158,10 @@ export default function ChannelsPage() {
             </ul>
           </div>
           <MediaFrame
-            src="/assets/channels/opportunity-diagram.jpg"
+            src="/assets/channels/systemic-opportunity.png"
             alt="Design opportunity diagram mapping assumptions to evidence and needs"
             contain
+            ratio="1088 / 768"
           />
         </div>
       </section>
@@ -174,8 +177,8 @@ export default function ChannelsPage() {
 
           <div className="solution-row">
             <div className="image-pair">
-              <MediaFrame src="/assets/channels/phone-preview.jpg" alt="Channels mobile storytelling platform" />
-              <MediaFrame src="/assets/channels/friendship-poster.jpg" alt="Channels water friendship episode artwork" />
+              <MediaFrame src="/assets/channels/phone-scan.png" alt="Channels QR touchpoint being scanned on a phone" ratio="430 / 784" />
+              <MediaFrame src="/assets/channels/friendship-post.png" alt="Channels water friendship episode artwork" ratio="440 / 783" />
             </div>
             <div>
               <h3>Capture and Distribution</h3>
@@ -194,8 +197,9 @@ export default function ChannelsPage() {
           </div>
 
           <div className="solution-row reverse">
-            <div className="image-pair">
-              <MediaFrame src="/assets/channels/canal-posters.jpg" alt="Channels canal-side participation posters" />
+            <div className="prototype-grid">
+              <MediaFrame src="/assets/channels/canal-posters-original.png" alt="Channels canal-side participation posters" ratio="358 / 316" />
+              <MediaFrame src="/assets/channels/canal-wall-test.png" alt="Channels posters installed beside the canal" ratio="308 / 211" />
               <MediaFrame src="/assets/channels/touchpoint-stand.jpg" alt="Channels public touchpoint stand" />
             </div>
             <div>
@@ -212,7 +216,7 @@ export default function ChannelsPage() {
           </div>
 
           <div className="solution-row">
-            <MediaFrame src="/assets/channels/canal-touchpoints.jpg" alt="Channels posters installed beside the canal" />
+            <MediaFrame src="/assets/channels/service-mechanism.png" alt="Channels service mechanism connecting boaters, stories and visitors" contain ratio="358 / 197" />
             <div>
               <h3>Service Mechanism</h3>
               <p>

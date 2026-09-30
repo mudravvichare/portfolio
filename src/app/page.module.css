@@ -1,26 +1,25 @@
 .page { min-height: 100svh; background: var(--paper); }
 .hero {
-  display: grid; grid-template-columns: 305px minmax(0, 730px); align-items: center;
-  justify-content: center; gap: clamp(4rem, 6vw, 8rem); min-height: 465px; padding: 2rem var(--gutter) 3.5rem;
+  display: grid; grid-template-columns: 250px minmax(0, 730px); align-items: center;
+  justify-content: center; gap: clamp(4rem, 5vw, 5rem); min-height: 330px; padding: 1.5rem var(--gutter) 2.5rem;
 }
 .portrait {
-  position: relative; width: 305px; aspect-ratio: 1; overflow: hidden;
-  clip-path: polygon(50% 0%,61% 4%,71% 2%,80% 9%,90% 12%,94% 23%,100% 31%,97% 42%,100% 52%,95% 62%,94% 73%,85% 80%,79% 91%,68% 94%,59% 100%,49% 97%,39% 100%,30% 95%,19% 92%,13% 82%,5% 75%,5% 64%,0% 55%,3% 44%,0% 34%,7% 25%,10% 14%,21% 10%,29% 3%,40% 5%);
+  position: relative; width: 250px; aspect-ratio: 1;
 }
-.portrait img { object-fit: cover; object-position: center 39%; transform: scale(1.72); }
-.intro h1 { font-family: var(--font-cal-sans), sans-serif; font-size: clamp(2.6rem, 3vw, 3.75rem); font-weight: 400; line-height: 1; }
-.intro > p { margin-top: 0.8rem; font-size: clamp(2rem, 2.5vw, 3rem); line-height: 1.2; letter-spacing: -0.025em; }
-.heroLinks { display: flex; gap: 3.2rem; margin-top: 4.8rem; font-size: 1.25rem; font-weight: 800; }
-.work { padding: 1.5rem var(--gutter) 5.8rem; }
-.work > h2 { margin-bottom: 3.3rem; font-size: 1.25rem; letter-spacing: 0.08em; }
+.portrait img { object-fit: contain; }
+.intro h1 { font-family: var(--font-cal-sans), sans-serif; font-size: clamp(2.35rem, 2.8vw, 2.6rem); font-weight: 400; line-height: 1.05; }
+.intro > p { margin-top: 0.75rem; font-size: clamp(1.75rem, 2.1vw, 2rem); line-height: 1.2; letter-spacing: -0.025em; }
+.heroLinks { display: flex; gap: 3rem; margin-top: 2.8rem; font-size: 1.1rem; font-weight: 800; }
+.work { padding: 1.5rem var(--gutter) 4.5rem; }
+.work > h2 { margin-bottom: 1.8rem; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.08em; }
 .mobileNote { display: none; }
-.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.6rem, 2.4vw, 3rem); }
+.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(2rem, 4.3vw, 4rem); }
 :global(.project-card) { position: relative; display: block; min-width: 0; }
 :global(.project-image) { position: relative; width: 100%; aspect-ratio: 1.25 / 1; overflow: hidden; border-radius: 16px; background: #ddd; }
 :global(.project-image img) { object-fit: cover; transition: transform 380ms ease; }
 :global(.project-card:hover .project-image img), :global(.project-card:focus-visible .project-image img) { transform: scale(1.018); }
-:global(.project-card h3) { max-width: 580px; margin-top: 2.2rem; font-family: var(--font-cal-sans), sans-serif; font-size: clamp(1.7rem, 1.7vw, 2.2rem); font-weight: 400; line-height: 1.12; }
-:global(.project-card > p) { margin-top: 1.8rem; font-size: clamp(0.95rem, 1vw, 1.12rem); font-weight: 800; }
+:global(.project-card h3) { max-width: 580px; margin-top: 2.2rem; font-family: var(--font-cal-sans), sans-serif; font-size: clamp(1.55rem, 1.5vw, 2rem); font-weight: 400; line-height: 1.12; }
+:global(.project-card > p) { margin-top: 1.2rem; font-size: clamp(0.9rem, 0.95vw, 1.05rem); font-weight: 800; }
 :global(.wip-overlay) { position: absolute; inset: 0; display: grid; place-items: center; background: rgb(35 33 33 / 78%); color: #fff; font-family: var(--font-cal-sans), sans-serif; font-size: clamp(1.7rem, 2vw, 2.5rem); opacity: 0; transition: opacity 220ms ease; }
 :global(.project-card-wip:hover .wip-overlay), :global(.project-card-wip:focus-visible .wip-overlay) { opacity: 1; }
 :global(.wip-mobile) { display: none; }
@@ -40,4 +39,12 @@
   :global(.project-card > p) { margin-top: 1rem; font-size: 0.92rem; line-height: 1.45; }
   :global(.wip-overlay) { display: none; }
   :global(.wip-mobile) { display: inline-block; margin-top: 0.9rem; padding: 0.4rem 0.65rem; border: 1px solid currentColor; border-radius: 99px; font-size: 0.75rem; font-weight: 800; }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .hero { grid-template-columns: 180px 1fr; min-height: 245px; gap: 2rem; }
+  .portrait { width: 180px; }
+  .intro h1 { font-size: 2rem; }
+  .intro > p { font-size: 1.8rem; }
+  .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3.5rem 1.5rem; }
 }

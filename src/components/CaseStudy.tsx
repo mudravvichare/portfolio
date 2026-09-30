@@ -72,22 +72,35 @@ export function MediaFrame({
   alt,
   contain = false,
   sizes = "(max-width: 800px) 100vw, 50vw",
+  ratio,
 }: {
   src: string;
   alt: string;
   contain?: boolean;
   sizes?: string;
+  ratio?: string;
 }) {
   return (
-    <div className={`media-frame${contain ? " contain" : ""}`}>
+    <div
+      className={`media-frame${contain ? " contain" : ""}${ratio ? " has-ratio" : ""}`}
+      style={ratio ? { aspectRatio: ratio } : undefined}
+    >
       <Image src={src} alt={alt} fill sizes={sizes} />
     </div>
   );
 }
 
-export function GalleryTile({ src, alt }: { src: string; alt: string }) {
+export function GalleryTile({
+  src,
+  alt,
+  contain = false,
+}: {
+  src: string;
+  alt: string;
+  contain?: boolean;
+}) {
   return (
-    <div className="gallery-tile">
+    <div className={`gallery-tile${contain ? " contain" : ""}`}>
       <Image src={src} alt={alt} fill sizes="(max-width: 800px) 50vw, 25vw" />
     </div>
   );
