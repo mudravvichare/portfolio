@@ -15,11 +15,11 @@ function CardContent({ image, title, metadata, alt, wip }: ProjectCardProps) {
     <>
       <div className="project-image">
         <Image src={image} alt={alt} fill sizes="(max-width: 800px) 100vw, 33vw" />
-        {wip ? <span className="wip-overlay">Work in progress</span> : null}
+        {wip ? <span className="wip-overlay">Coming soon</span> : null}
       </div>
       <h3>{title}</h3>
       <p>{metadata}</p>
-      {wip ? <span className="wip-mobile">Work in progress</span> : null}
+      {wip ? <span className="wip-mobile">Coming soon</span> : null}
     </>
   );
 }

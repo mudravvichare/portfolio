@@ -1,9 +1,48 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import type { ReactNode } from "react";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 
 type MetaItem = { label: string; content: ReactNode };
+
+function ResponsiveCaseHeroImage({
+  desktopImage,
+  mobileImage,
+  alt,
+}: {
+  desktopImage: string;
+  mobileImage: string;
+  alt: string;
+}) {
+  const common = { alt, sizes: "100vw", loading: "eager" as const };
+  const {
+    props: { srcSet: mobileSrcSet },
+  } = getImageProps({
+    ...common,
+    src: mobileImage,
+    width: 358,
+    height: 297,
+    quality: 75,
+  });
+  const { props: desktopProps } = getImageProps({
+    ...common,
+    src: desktopImage,
+    width: 1840,
+    height: 784,
+    quality: 75,
+  });
+
+  return (
+    <picture>
+      <source media="(max-width: 800px)" srcSet={mobileSrcSet ?? mobileImage} />
+      <img
+        {...desktopProps}
+        alt={alt}
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      />
+    </picture>
+  );
+}
 
 export function CaseStudyLayout({ children }: { children: ReactNode }) {
   return (
@@ -17,6 +56,7 @@ export function CaseStudyLayout({ children }: { children: ReactNode }) {
 
 export function CaseHero({
   image,
+  mobileImage,
   imageAlt,
   title,
   deck,
@@ -25,6 +65,7 @@ export function CaseHero({
   meta,
 }: {
   image: string;
+  mobileImage?: string;
   imageAlt: string;
   title: string;
   deck: string;
@@ -36,7 +77,15 @@ export function CaseHero({
     <>
       <div className="case-shell">
         <div className="case-hero-media">
-          <Image src={image} alt={imageAlt} fill priority sizes="100vw" />
+          {mobileImage ? (
+            <ResponsiveCaseHeroImage
+              desktopImage={image}
+              mobileImage={mobileImage}
+              alt={imageAlt}
+            />
+          ) : (
+            <Image src={image} alt={imageAlt} fill priority sizes="100vw" />
+          )}
         </div>
       </div>
       <section className="case-intro" aria-labelledby="case-title">

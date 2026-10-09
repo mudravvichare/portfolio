@@ -4,16 +4,7 @@ const RESUME_URL =
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <div className="sustainability">
-        <a
-          href="https://www.websitecarbon.com/website/mudraaa-framer-website/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          🌏 This website is sustainable
-        </a>
-        <small>© 2026 | Imagined in a fit of “I’ll fix it later” optimism</small>
-      </div>
+      <small className="footer-note">© 2026 | Imagined in a fit of “I’ll fix it later” optimism</small>
       <div className="footer-links">
         <a
           className="icon-link"

@@ -21,7 +21,10 @@ export default function Home() {
           </div>
           <div className={styles.intro}>
             <h1 id="intro-heading">Heyaa, I&apos;m Mudra</h1>
-            <p>I solve problems and build cool things</p>
+            <p>
+              <span className={styles.headlineLine}>I solve problems and</span>{" "}
+              <span className={styles.headlineLine}>build cool things</span>
+            </p>
             <div className={styles.heroLinks}>
               <a className="hero-link" href="mailto:mudravvichare@gmail.com">
                 Say hi →
