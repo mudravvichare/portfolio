@@ -48,7 +48,7 @@ img { display: block; max-width: 100%; }
 .footer-links a:hover, .footer-links a:focus-visible { color: #fff; opacity: 1; }
 .footer-resume { font-size: 0.95rem; font-weight: 400; }
 .icon-link { display: inline-grid; min-width: 44px; min-height: 44px; place-items: center; font-size: 1.45rem; font-weight: 800; }
-.mail-icon { width: 25px; height: 18px; fill: currentColor; }
+.mail-icon { width: 27px; height: 18px; fill: currentColor; }
 
 .case-page { background: var(--surface); }
 .case-page .site-header { background: var(--surface); }
