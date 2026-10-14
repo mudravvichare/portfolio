@@ -1,10 +1,13 @@
 const RESUME_URL =
-  "https://drive.google.com/file/d/1nEN23ER0e02FJAKSL0AWxxPDEkqfQGtR/view?usp=drive_link";
+  "https://drive.google.com/file/d/1jdJzeW8pBJiQYGr24QhuWniDmHJJvsfk/view?usp=sharing";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <small className="footer-note">© 2026 | Imagined in a fit of “I’ll fix it later” optimism</small>
+      <small className="footer-note">
+        <span>© 2026 |</span>{" "}
+        <strong>Imagined in a fit of “I’ll fix it later” optimism</strong>
+      </small>
       <div className="footer-links">
         <a
           className="icon-link"
@@ -24,7 +27,7 @@ export function SiteFooter() {
         >
           in
         </a>
-        <a href={RESUME_URL} target="_blank" rel="noreferrer">
+        <a className="footer-resume" href={RESUME_URL} target="_blank" rel="noreferrer">
           View Resume
         </a>
       </div>

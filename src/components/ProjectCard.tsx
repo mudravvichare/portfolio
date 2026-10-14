@@ -13,9 +13,11 @@ type ProjectCardProps = {
 function CardContent({ image, title, metadata, alt, wip }: ProjectCardProps) {
   return (
     <>
-      <div className="project-image">
-        <Image src={image} alt={alt} fill sizes="(max-width: 800px) 100vw, 33vw" />
-        {wip ? <span className="wip-overlay">Coming soon</span> : null}
+      <div className="project-image-space">
+        <div className="project-image">
+          <Image src={image} alt={alt} fill sizes="(max-width: 800px) 100vw, 33vw" />
+          {wip ? <span className="wip-overlay">Coming soon</span> : null}
+        </div>
       </div>
       <h3>{title}</h3>
       <p>{metadata}</p>

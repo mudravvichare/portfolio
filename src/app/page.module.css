@@ -1,34 +1,76 @@
 .page { min-height: 100svh; background: var(--paper); }
 .hero {
-  display: grid; grid-template-columns: 305px minmax(0, 730px); align-items: center;
+  display: grid; grid-template-columns: 230px minmax(0, 730px); align-items: center;
   justify-content: center; gap: clamp(4rem, 5vw, 5rem); min-height: 470px; padding: 1.5rem var(--gutter) 2.5rem;
 }
 .portrait {
-  position: relative; width: 305px; aspect-ratio: 1;
+  position: relative; width: 230px; height: 230px; transform: rotate(0deg);
+  transition: transform 300ms ease-in-out;
 }
 .portrait img { object-fit: contain; }
-.intro h1 { font-family: var(--font-cal-sans), sans-serif; font-size: clamp(2.35rem, 2.8vw, 2.6rem); font-weight: 400; line-height: 1.05; }
-.intro > p { margin-top: 0.75rem; font-size: clamp(1.75rem, 2.1vw, 2.5rem); line-height: 1.2; letter-spacing: -0.025em; }
+.intro h1,
+.intro > p {
+  font-family: var(--font-manrope), Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.5;
+}
+.intro h1 { color: #232121; }
+.intro > p { margin-top: 0; color: #696969; }
 .headlineLine { display: inline; }
-.heroLinks { display: flex; gap: 3rem; margin-top: 2.8rem; font-size: 1.1rem; font-weight: 800; }
+.heroLinks { display: flex; gap: 3rem; margin-top: 2.8rem; }
+.heroLinks :global(.hero-link) {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  transform: scale(1);
+  transform-origin: center;
+  transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+}
 .work { padding: 1.5rem var(--gutter) 4.5rem; }
-.work > h2 { margin-bottom: 1.8rem; font-size: 1.25rem; font-weight: 600; }
+.work > h2 {
+  margin-bottom: 1.8rem;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
 .mobileNote { display: none; }
 .projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(2rem, 4.3vw, 4rem); }
 :global(.project-card) { position: relative; display: block; min-width: 0; }
-:global(.project-image) { position: relative; width: 100%; aspect-ratio: 1.25 / 1; overflow: hidden; border-radius: 16px; background: #ddd; }
+:global(.project-image-space) { position: relative; width: 100%; aspect-ratio: 1.25 / 1; padding-bottom: 13px; }
+:global(.project-image) {
+  position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 16px;
+  background: #ddd; transition: height 300ms ease-in-out;
+}
 :global(.project-image img) { object-fit: cover; transition: transform 380ms ease; }
-:global(.project-card:hover .project-image img), :global(.project-card:focus-visible .project-image img) { transform: scale(1.018); }
-:global(.project-card h3) { max-width: 580px; margin-top: 2.2rem; font-family: var(--font-cal-sans), sans-serif; font-size: clamp(1.55rem, 1.5vw, 2rem); font-weight: 400; line-height: 1.12; }
-:global(.project-card > p) { margin-top: 1.2rem; font-size: clamp(0.9rem, 0.95vw, 1.05rem); font-weight: 800; }
+:global(.project-card h3) {
+  max-width: 580px; margin-top: 40px; font-family: var(--font-manrope), Arial, sans-serif;
+  font-size: 22px; font-weight: 800; letter-spacing: 0; line-height: 1.2;
+}
+:global(.project-card > p) {
+  margin-top: 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; line-height: 1.2;
+}
 :global(.wip-overlay) { position: absolute; inset: 0; display: grid; place-items: center; background: rgb(35 33 33 / 78%); color: #fff; font-family: var(--font-cal-sans), sans-serif; font-size: clamp(1.7rem, 2vw, 2.5rem); opacity: 0; transition: opacity 220ms ease; }
 :global(.project-card-wip:hover .wip-overlay), :global(.project-card-wip:focus-visible .wip-overlay) { opacity: 1; }
 :global(.wip-mobile) { display: none; }
 
+@media (hover: hover) and (pointer: fine) {
+  .portrait:hover { transform: rotate(-3deg); }
+  .heroLinks :global(.hero-link:hover) { transform: scale(1.03); }
+  :global(.project-card:hover .project-image),
+  :global(.project-card:focus-visible .project-image) { height: calc(100% + 13px); }
+}
+
+.heroLinks :global(.hero-link:focus-visible) { transform: scale(1.03); }
+
 @media (max-width: 800px) {
   .hero { grid-template-columns: 110px 1fr; gap: 1rem; min-height: 145px; justify-content: stretch; padding: 1rem 1.25rem 0.5rem; }
-  .portrait { width: 110px; }
-  .intro h1 { font-size: 1.22rem; white-space: nowrap; }
+  .portrait { width: 110px; height: 110px; }
+  .intro h1 { font-size: 1.22rem; }
   .intro > p { margin-top: 0.35rem; font-size: 1.45rem; line-height: 1.23; }
   .headlineLine { display: block; white-space: nowrap; }
   .heroLinks { display: none; }
@@ -36,16 +78,17 @@
   .work > h2 { display: none; }
   .mobileNote { display: block; margin-bottom: 2.2rem; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.08em; }
   .projects { grid-template-columns: 1fr; gap: 3rem; }
-  :global(.project-image) { aspect-ratio: 1.19 / 1; border-radius: 14px; }
-  :global(.project-card h3) { margin-top: 1.35rem; font-size: 1.55rem; line-height: 1.12; }
-  :global(.project-card > p) { margin-top: 1rem; font-size: 0.92rem; line-height: 1.45; }
+  :global(.project-image-space) { aspect-ratio: 1.19 / 1; padding-bottom: 0; }
+  :global(.project-image) { border-radius: 14px; }
+  :global(.project-card h3) { margin-top: 40px; font-size: 22px; line-height: 1.2; }
+  :global(.project-card > p) { margin-top: 20px; font-size: 14px; line-height: 1.2; }
   :global(.wip-overlay) { display: none; }
   :global(.wip-mobile) { display: inline-block; margin-top: 0.9rem; padding: 0.4rem 0.65rem; border: 1px solid currentColor; border-radius: 99px; font-size: 0.75rem; font-weight: 800; }
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
   .hero { grid-template-columns: 180px 1fr; min-height: 245px; gap: 2rem; }
-  .portrait { width: 180px; }
+  .portrait { width: 180px; height: 180px; }
   .intro h1 { font-size: 2rem; }
   .intro > p { font-size: 1.8rem; }
   .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3.5rem 1.5rem; }

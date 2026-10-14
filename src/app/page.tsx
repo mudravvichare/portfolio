@@ -20,14 +20,17 @@ export default function Home() {
             />
           </div>
           <div className={styles.intro}>
-            <h1 id="intro-heading">Heyaa, I&apos;m Mudra</h1>
+            <h1 id="intro-heading">Heyaa, I&apos;m Mudra, let&apos;s connect</h1>
             <p>
-              <span className={styles.headlineLine}>I solve problems and</span>{" "}
+              <span className={styles.headlineLine}>I like to solve problems and</span>{" "}
               <span className={styles.headlineLine}>build cool things</span>
             </p>
             <div className={styles.heroLinks}>
-              <a className="hero-link" href="mailto:mudravvichare@gmail.com">
-                Say hi →
+              <a
+                className="hero-link"
+                href="mailto:mudravvichare@gmail.com?subject=Heya.'"
+              >
+                Send a note 📮
               </a>
               <a
                 className="hero-link"
